@@ -1,0 +1,685 @@
+<html lang="fr"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warinx - Templates HTML, CSS &amp; JS Premium</title>
+    <script src="../tailwindcsscdn.js"></script>
+    <script src="../lucide.min.js"></script>
+    <!-- <script src="https://unpkg.com/lucide@latest"></script> -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-[#F9FAFB] text-[#263238]">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-gray-200">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-12">
+                    <a href="#" class="text-xl font-semibold tracking-tight text-[#263238]">Warinx</a>
+                    <div class="hidden md:flex space-x-8">
+                        <a href="#templates" class="text-sm font-medium text-gray-600 hover:text-[#00B8D9] transition-colors">Templates</a>
+                        <a href="#categories" class="text-sm font-medium text-gray-600 hover:text-[#00B8D9] transition-colors">Blog</a>
+                        <a href="#pricing" class="text-sm font-medium text-gray-600 hover:text-[#00B8D9] transition-colors">Service</a>
+                        <a href="#about" class="text-sm font-medium text-gray-600 hover:text-[#00B8D9] transition-colors">À propos</a>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button class="relative p-2 hover:bg-gray-100 rounded-lg transition-colors" onclick="toggleCart()">
+                        <i data-lucide="shopping-cart" style="width: 20px; height: 20px; stroke-width: 1.5;"></i>
+                        <span id="cartCount" class="absolute -top-1 -right-1 bg-[#00B8D9] text-white text-xs font-medium rounded-full w-5 h-5 flex items-center justify-center" style="display: none;">0</span>
+                    </button>
+                    <!-- <button class="hidden md:block px-4 py-2 text-sm font-medium text-[#00B8D9] hover:bg-gray-100 rounded-lg transition-colors">Connexion</button>
+                    <button class="px-4 py-2 text-sm font-medium text-white bg-[#00B8D9] hover:bg-[#00A3C4] rounded-lg transition-colors">S'inscrire</button> -->
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden bg-white border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
+            <div class="text-center max-w-3xl mx-auto">
+                <div class="inline-flex items-center px-3 py-1 rounded-full bg-[#00B8D9]/10 text-[#00B8D9] text-sm font-medium mb-6">
+                    <i data-lucide="sparkles" style="width: 14px; height: 14px; stroke-width: 1.5; margin-right: 6px;"></i>
+                    Nouveau : 50+ templates ajoutés ce mois
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-[#263238] mb-6">
+                    Des templates HTML professionnels pour vos projets
+                </h1>
+                <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+                    Découvrez notre collection de templates modernes, responsive et optimisés. Prêts à l'emploi avec HTML, CSS et JavaScript.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#templates" class="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-[#00B8D9] hover:bg-[#00A3C4] rounded-lg transition-colors">
+                        Parcourir les templates
+                        <i data-lucide="arrow-right" style="width: 18px; height: 18px; stroke-width: 1.5; margin-left: 8px;"></i>
+                    </a>
+                    <a href="#about" class="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-[#263238] bg-white hover:bg-gray-50 border border-gray-300 rounded-lg transition-colors">
+                        En savoir plus
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="bg-white border-b border-gray-200 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="text-3xl font-semibold text-[#00B8D9] mb-2">500+</div>
+                    <div class="text-sm text-gray-600">Templates disponibles</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-semibold text-[#00B8D9] mb-2">50k+</div>
+                    <div class="text-sm text-gray-600">Clients satisfaits</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-semibold text-[#00B8D9] mb-2">24/7</div>
+                    <div class="text-sm text-gray-600">Support client</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-semibold text-[#00B8D9] mb-2">100%</div>
+                    <div class="text-sm text-gray-600">Code personnalisable</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="categories" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl sm:text-4xl font-semibold tracking-tight text-[#263238] mb-4">Catégories populaires</h2>
+                <p class="text-lg text-gray-600">Trouvez le template parfait pour votre projet</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="group bg-white border border-gray-200 rounded-xl p-6 hover:border-[#00B8D9] hover:shadow-lg transition-all cursor-pointer">
+                    <div class="w-12 h-12 bg-[#00B8D9]/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-[#00B8D9]/20 transition-colors">
+                        <i data-lucide="layout-dashboard" style="width: 24px; height: 24px; stroke-width: 1.5;" class="text-[#00B8D9]"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-[#263238] mb-2">Dashboards</h3>
+                    <p class="text-sm text-gray-600 mb-3">Interfaces d'administration modernes</p>
+                    <div class="text-sm font-medium text-[#00B8D9]">125 templates →</div>
+                </div>
+                <div class="group bg-white border border-gray-200 rounded-xl p-6 hover:border-[#00B8D9] hover:shadow-lg transition-all cursor-pointer">
+                    <div class="w-12 h-12 bg-[#00B8D9]/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-[#00B8D9]/20 transition-colors">
+                        <i data-lucide="shopping-bag" style="width: 24px; height: 24px; stroke-width: 1.5;" class="text-[#00B8D9]"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-[#263238] mb-2">E-commerce</h3>
+                    <p class="text-sm text-gray-600 mb-3">Boutiques en ligne complètes</p>
+                    <div class="text-sm font-medium text-[#00B8D9]">98 templates →</div>
+                </div>
+                <div class="group bg-white border border-gray-200 rounded-xl p-6 hover:border-[#00B8D9] hover:shadow-lg transition-all cursor-pointer">
+                    <div class="w-12 h-12 bg-[#00B8D9]/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-[#00B8D9]/20 transition-colors">
+                        <i data-lucide="globe" style="width: 24px; height: 24px; stroke-width: 1.5;" class="text-[#00B8D9]"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-[#263238] mb-2">Landing Pages</h3>
+                    <p class="text-sm text-gray-600 mb-3">Pages de conversion optimisées</p>
+                    <div class="text-sm font-medium text-[#00B8D9]">156 templates →</div>
+                </div>
+                <div class="group bg-white border border-gray-200 rounded-xl p-6 hover:border-[#00B8D9] hover:shadow-lg transition-all cursor-pointer">
+                    <div class="w-12 h-12 bg-[#00B8D9]/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-[#00B8D9]/20 transition-colors">
+                        <i data-lucide="briefcase" style="width: 24px; height: 24px; stroke-width: 1.5;" class="text-[#00B8D9]"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-[#263238] mb-2">Portfolio</h3>
+                    <p class="text-sm text-gray-600 mb-3">Présentez votre travail avec style</p>
+                    <div class="text-sm font-medium text-[#00B8D9]">87 templates →</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Templates Grid -->
+    <section id="templates" class="py-20 bg-white border-y border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-12">
+                <div>
+                    <h2 class="text-3xl sm:text-4xl font-semibold tracking-tight text-[#263238] mb-2">Templates populaires</h2>
+                    <p class="text-lg text-gray-600">Les meilleures ventes du mois</p>
+                </div>
+                <div class="flex items-center space-x-2 mt-4 sm:mt-0">
+                    <button class="px-4 py-2 text-sm font-medium text-white bg-[#00B8D9] rounded-lg">Tous</button>
+                    <button class="px-4 py-2 text-sm font-medium text-gray-600 hover:text-[#00B8D9] hover:bg-gray-100 rounded-lg transition-colors">Nouveautés</button>
+                    <button class="px-4 py-2 text-sm font-medium text-gray-600 hover:text-[#00B8D9] hover:bg-gray-100 rounded-lg transition-colors">Populaires</button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Template Card 1 -->
+                <div class="group bg-white border border-gray-200 rounded-xl overflow-hidden hover:border-[#00B8D9] hover:shadow-xl transition-all">
+                    <div class="relative overflow-hidden bg-gradient-to-br from-purple-100 to-blue-100 aspect-video">
+                        <img src="https://images.unsplash.com/photo-1618761714954-0b8cd0026356?w=600&amp;h=400&amp;fit=crop" alt="Template" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute top-3 right-3 px-2 py-1 bg-[#00B8D9] text-white text-xs font-medium rounded">Nouveau</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs font-medium text-gray-500 uppercase tracking-wide">Dashboard</span>
+                            <div class="flex items-center space-x-1">
+                                <i data-lucide="star" style="width: 14px; height: 14px; stroke-width: 1.5; fill: #FFA500; color: #FFA500;"></i>
+                                <span class="text-sm font-medium text-gray-700">4.9</span>
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-semibold text-[#263238] mb-2">Modern Dashboard Pro</h3>
+                        <p class="text-sm text-gray-600 mb-4">Dashboard admin complet avec composants réutilisables et thème sombre/clair</p>
+                        <div class="flex items-center justify-between">
+                            <div class="text-2xl font-semibold text-[#263238]">49€</div>
+                            <button onclick="addToCart('Modern Dashboard Pro', 49)" class="px-4 py-2 text-sm font-medium text-white bg-[#00B8D9] hover:bg-[#00A3C4] rounded-lg transition-colors">
+                                Ajouter au panier
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Template Card 2 -->
+                <div class="group bg-white border border-gray-200 rounded-xl overflow-hidden hover:border-[#00B8D9] hover:shadow-xl transition-all">
+                    <div class="relative overflow-hidden bg-gradient-to-br from-pink-100 to-orange-100 aspect-video">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&amp;h=400&amp;fit=crop" alt="Template" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs font-medium text-gray-500 uppercase tracking-wide">E-commerce</span>
+                            <div class="flex items-center space-x-1">
+                                <i data-lucide="star" style="width: 14px; height: 14px; stroke-width: 1.5; fill: #FFA500; color: #FFA500;"></i>
+                                <span class="text-sm font-medium text-gray-700">4.8</span>
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-semibold text-[#263238] mb-2">ShopFlow Premium</h3>
+                        <p class="text-sm text-gray-600 mb-4">Template e-commerce avec panier, checkout et gestion des produits</p>
+                        <div class="flex items-center justify-between">
+                            <div class="text-2xl font-semibold text-[#263238]">69€</div>
+                            <button onclick="addToCart('ShopFlow Premium', 69)" class="px-4 py-2 text-sm font-medium text-white bg-[#00B8D9] hover:bg-[#00A3C4] rounded-lg transition-colors">
+                                Ajouter au panier
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Template Card 3 -->
+                <div class="group bg-white border border-gray-200 rounded-xl overflow-hidden hover:border-[#00B8D9] hover:shadow-xl transition-all">
+                    <div class="relative overflow-hidden bg-gradient-to-br from-green-100 to-teal-100 aspect-video">
+                        <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=600&amp;h=400&amp;fit=crop" alt="Template" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute top-3 right-3 px-2 py-1 bg-[#00B8D9] text-white text-xs font-medium rounded">Populaire</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs font-medium text-gray-500 uppercase tracking-wide">Landing Page</span>
+                            <div class="flex items-center space-x-1">
+                                <i data-lucide="star" style="width: 14px; height: 14px; stroke-width: 1.5; fill: #FFA500; color: #FFA500;"></i>
+                                <span class="text-sm font-medium text-gray-700">5.0</span>
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-semibold text-[#263238] mb-2">SaaS Launch Kit</h3>
+                        <p class="text-sm text-gray-600 mb-4">Landing page pour startups SaaS avec sections pré-conçues</p>
+                        <div class="flex items-center justify-between">
+                            <div class="text-2xl font-semibold text-[#263238]">39€</div>
+                            <button onclick="addToCart('SaaS Launch Kit', 39)" class="px-4 py-2 text-sm font-medium text-white bg-[#00B8D9] hover:bg-[#00A3C4] rounded-lg transition-colors">
+                                Ajouter au panier
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Template Card 4 -->
+                <div class="group bg-white border border-gray-200 rounded-xl overflow-hidden hover:border-[#00B8D9] hover:shadow-xl transition-all">
+                    <div class="relative overflow-hidden bg-gradient-to-br from-blue-100 to-indigo-100 aspect-video">
+                        <img src="https://images.unsplash.com/photo-1517292987719-0369a794ec0f?w=600&amp;h=400&amp;fit=crop" alt="Template" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs font-medium text-gray-500 uppercase tracking-wide">Portfolio</span>
+                            <div class="flex items-center space-x-1">
+                                <i data-lucide="star" style="width: 14px; height: 14px; stroke-width: 1.5; fill: #FFA500; color: #FFA500;"></i>
+                                <span class="text-sm font-medium text-gray-700">4.7</span>
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-semibold text-[#263238] mb-2">Creative Portfolio</h3>
+                        <p class="text-sm text-gray-600 mb-4">Portfolio minimaliste pour designers et développeurs créatifs</p>
+                        <div class="flex items-center justify-between">
+                            <div class="text-2xl font-semibold text-[#263238]">29€</div>
+                            <button onclick="addToCart('Creative Portfolio', 29)" class="px-4 py-2 text-sm font-medium text-white bg-[#00B8D9] hover:bg-[#00A3C4] rounded-lg transition-colors">
+                                Ajouter au panier
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Template Card 5 -->
+                <div class="group bg-white border border-gray-200 rounded-xl overflow-hidden hover:border-[#00B8D9] hover:shadow-xl transition-all">
+                    <div class="relative overflow-hidden bg-gradient-to-br from-yellow-100 to-red-100 aspect-video">
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600&amp;h=400&amp;fit=crop" alt="Template" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs font-medium text-gray-500 uppercase tracking-wide">Corporate</span>
+                            <div class="flex items-center space-x-1">
+                                <i data-lucide="star" style="width: 14px; height: 14px; stroke-width: 1.5; fill: #FFA500; color: #FFA500;"></i>
+                                <span class="text-sm font-medium text-gray-700">4.9</span>
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-semibold text-[#263238] mb-2">Business Hub</h3>
+                        <p class="text-sm text-gray-600 mb-4">Site vitrine professionnel pour entreprises et consultants</p>
+                        <div class="flex items-center justify-between">
+                            <div class="text-2xl font-semibold text-[#263238]">59€</div>
+                            <button onclick="addToCart('Business Hub', 59)" class="px-4 py-2 text-sm font-medium text-white bg-[#00B8D9] hover:bg-[#00A3C4] rounded-lg transition-colors">
+                                Ajouter au panier
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Template Card 6 -->
+                <div class="group bg-white border border-gray-200 rounded-xl overflow-hidden hover:border-[#00B8D9] hover:shadow-xl transition-all">
+                    <div class="relative overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 aspect-video">
+                        <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?w=600&amp;h=400&amp;fit=crop" alt="Template" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute top-3 right-3 px-2 py-1 bg-[#00B8D9] text-white text-xs font-medium rounded">Nouveau</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs font-medium text-gray-500 uppercase tracking-wide">Blog</span>
+                            <div class="flex items-center space-x-1">
+                                <i data-lucide="star" style="width: 14px; height: 14px; stroke-width: 1.5; fill: #FFA500; color: #FFA500;"></i>
+                                <span class="text-sm font-medium text-gray-700">4.6</span>
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-semibold text-[#263238] mb-2">BlogMaster Pro</h3>
+                        <p class="text-sm text-gray-600 mb-4">Template de blog moderne avec système de catégories et commentaires</p>
+                        <div class="flex items-center justify-between">
+                            <div class="text-2xl font-semibold text-[#263238]">35€</div>
+                            <button onclick="addToCart('BlogMaster Pro', 35)" class="px-4 py-2 text-sm font-medium text-white bg-[#00B8D9] hover:bg-[#00A3C4] rounded-lg transition-colors">
+                                Ajouter au panier
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <button class="px-6 py-3 text-base font-medium text-[#263238] bg-white border border-gray-300 hover:border-[#00B8D9] hover:text-[#00B8D9] rounded-lg transition-colors">
+                    Voir tous les templates
+                    <i data-lucide="arrow-right" style="width: 18px; height: 18px; stroke-width: 1.5; margin-left: 8px; display: inline;"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl sm:text-4xl font-semibold tracking-tight text-[#263238] mb-4">Tarifs flexibles</h2>
+                <p class="text-lg text-gray-600">Choisissez la formule qui vous convient</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Pricing Card 1 -->
+                <div class="bg-white border border-gray-200 rounded-xl p-8 hover:border-[#00B8D9] hover:shadow-lg transition-all">
+                    <div class="mb-6">
+                        <h3 class="text-xl font-semibold text-[#263238] mb-2">Starter</h3>
+                        <p class="text-sm text-gray-600">Pour les petits projets</p>
+                    </div>
+                    <div class="mb-6">
+                        <div class="text-4xl font-semibold text-[#263238] mb-1">29€</div>
+                        <div class="text-sm text-gray-600">par template</div>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i data-lucide="check" style="width: 18px; height: 18px; stroke-width: 1.5; margin-top: 2px;" class="text-[#00B8D9] mr-3 flex-shrink-0"></i>
+                            <span class="text-sm text-gray-700">1 template au choix</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check" style="width: 18px; height: 18px; stroke-width: 1.5; margin-top: 2px;" class="text-[#00B8D9] mr-3 flex-shrink-0"></i>
+                            <span class="text-sm text-gray-700">Code source complet</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check" style="width: 18px; height: 18px; stroke-width: 1.5; margin-top: 2px;" class="text-[#00B8D9] mr-3 flex-shrink-0"></i>
+                            <span class="text-sm text-gray-700">Mises à jour gratuites</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check" style="width: 18px; height: 18px; stroke-width: 1.5; margin-top: 2px;" class="text-[#00B8D9] mr-3 flex-shrink-0"></i>
+                            <span class="text-sm text-gray-700">Support email</span>
+                        </li>
+                    </ul>
+                    <button class="w-full px-4 py-3 text-sm font-medium text-[#263238] bg-white border border-gray-300 hover:border-[#00B8D9] hover:text-[#00B8D9] rounded-lg transition-colors">
+                        Choisir Starter
+                    </button>
+                </div>
+
+                <!-- Pricing Card 2 - Featured -->
+                <div class="bg-[#263238] border-2 border-[#00B8D9] rounded-xl p-8 relative transform md:scale-105 shadow-xl">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-[#00B8D9] text-white text-xs font-medium rounded-full">
+                        Plus populaire
+                    </div>
+                    <div class="mb-6">
+                        <h3 class="text-xl font-semibold text-white mb-2">Pro</h3>
+                        <p class="text-sm text-gray-400">Pour les professionnels</p>
+                    </div>
+                    <div class="mb-6">
+                        <div class="text-4xl font-semibold text-white mb-1">99€</div>
+                        <div class="text-sm text-gray-400">accès illimité / an</div>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i data-lucide="check" style="width: 18px; height: 18px; stroke-width: 1.5; margin-top: 2px;" class="text-[#00B8D9] mr-3 flex-shrink-0"></i>
+                            <span class="text-sm text-gray-300">Tous les templates</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check" style="width: 18px; height: 18px; stroke-width: 1.5; margin-top: 2px;" class="text-[#00B8D9] mr-3 flex-shrink-0"></i>
+                            <span class="text-sm text-gray-300">Nouveaux templates inclus</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check" style="width: 18px; height: 18px; stroke-width: 1.5; margin-top: 2px;" class="text-[#00B8D9] mr-3 flex-shrink-0"></i>
+                            <span class="text-sm text-gray-300">Fichiers PSD/Figma inclus</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check" style="width: 18px; height: 18px; stroke-width: 1.5; margin-top: 2px;" class="text-[#00B8D9] mr-3 flex-shrink-0"></i>
+                            <span class="text-sm text-gray-300">Support prioritaire</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check" style="width: 18px; height: 18px; stroke-width: 1.5; margin-top: 2px;" class="text-[#00B8D9] mr-3 flex-shrink-0"></i>
+                            <span class="text-sm text-gray-300">Licence commerciale</span>
+                        </li>
+                    </ul>
+                    <button class="w-full px-4 py-3 text-sm font-medium text-white bg-[#00B8D9] hover:bg-[#00A3C4] rounded-lg transition-colors">
+                        Choisir Pro
+                    </button>
+                </div>
+
+                <!-- Pricing Card 3 -->
+                <div class="bg-white border border-gray-200 rounded-xl p-8 hover:border-[#00B8D9] hover:shadow-lg transition-all">
+                    <div class="mb-6">
+                        <h3 class="text-xl font-semibold text-[#263238] mb-2">Enterprise</h3>
+                        <p class="text-sm text-gray-600">Pour les équipes</p>
+                    </div>
+                    <div class="mb-6">
+                        <div class="text-4xl font-semibold text-[#263238] mb-1">299€</div>
+                        <div class="text-sm text-gray-600">accès illimité / an</div>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i data-lucide="check" style="width: 18px; height: 18px; stroke-width: 1.5; margin-top: 2px;" class="text-[#00B8D9] mr-3 flex-shrink-0"></i>
+                            <span class="text-sm text-gray-700">Tout du plan Pro</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check" style="width: 18px; height: 18px; stroke-width: 1.5; margin-top: 2px;" class="text-[#00B8D9] mr-3 flex-shrink-0"></i>
+                            <span class="text-sm text-gray-700">10 comptes équipe</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check" style="width: 18px; height: 18px; stroke-width: 1.5; margin-top: 2px;" class="text-[#00B8D9] mr-3 flex-shrink-0"></i>
+                            <span class="text-sm text-gray-700">Templates personnalisés</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check" style="width: 18px; height: 18px; stroke-width: 1.5; margin-top: 2px;" class="text-[#00B8D9] mr-3 flex-shrink-0"></i>
+                            <span class="text-sm text-gray-700">Support dédié 24/7</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check" style="width: 18px; height: 18px; stroke-width: 1.5; margin-top: 2px;" class="text-[#00B8D9] mr-3 flex-shrink-0"></i>
+                            <span class="text-sm text-gray-700">Licence étendue</span>
+                        </li>
+                    </ul>
+                    <button class="w-full px-4 py-3 text-sm font-medium text-[#263238] bg-white border border-gray-300 hover:border-[#00B8D9] hover:text-[#00B8D9] rounded-lg transition-colors">
+                        Choisir Enterprise
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 bg-white border-y border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl sm:text-4xl font-semibold tracking-tight text-[#263238] mb-4">Pourquoi choisir TemplateHub</h2>
+                <p class="text-lg text-gray-600">Des templates de qualité professionnelle</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="w-12 h-12 bg-[#00B8D9]/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="code-2" style="width: 24px; height: 24px; stroke-width: 1.5;" class="text-[#00B8D9]"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-[#263238] mb-2">Code propre</h3>
+                    <p class="text-sm text-gray-600">HTML sémantique, CSS moderne et JavaScript optimisé</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-12 h-12 bg-[#00B8D9]/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="smartphone" style="width: 24px; height: 24px; stroke-width: 1.5;" class="text-[#00B8D9]"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-[#263238] mb-2">100% Responsive</h3>
+                    <p class="text-sm text-gray-600">Parfait sur tous les appareils et tailles d'écran</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-12 h-12 bg-[#00B8D9]/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="zap" style="width: 24px; height: 24px; stroke-width: 1.5;" class="text-[#00B8D9]"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-[#263238] mb-2">Performance optimale</h3>
+                    <p class="text-sm text-gray-600">Temps de chargement ultra-rapides garantis</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-12 h-12 bg-[#00B8D9]/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="palette" style="width: 24px; height: 24px; stroke-width: 1.5;" class="text-[#00B8D9]"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-[#263238] mb-2">Personnalisable</h3>
+                    <p class="text-sm text-gray-600">Variables CSS pour personnaliser facilement les couleurs</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-12 h-12 bg-[#00B8D9]/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="file-text" style="width: 24px; height: 24px; stroke-width: 1.5;" class="text-[#00B8D9]"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-[#263238] mb-2">Documentation complète</h3>
+                    <p class="text-sm text-gray-600">Guides détaillés pour une prise en main rapide</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-12 h-12 bg-[#00B8D9]/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="headphones" style="width: 24px; height: 24px; stroke-width: 1.5;" class="text-[#00B8D9]"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-[#263238] mb-2">Support réactif</h3>
+                    <p class="text-sm text-gray-600">Notre équipe vous répond sous 24h maximum</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-br from-[#00B8D9] to-[#0095B8] rounded-2xl p-12 text-center">
+                <h2 class="text-3xl sm:text-4xl font-semibold tracking-tight text-white mb-4">Prêt à commencer ?</h2>
+                <p class="text-lg text-white/90 mb-8 max-w-2xl mx-auto">Rejoignez plus de 50 000 développeurs et designers qui utilisent nos templates</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#templates" class="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-[#00B8D9] bg-white hover:bg-gray-50 rounded-lg transition-colors">
+                        Parcourir les templates
+                    </a>
+                    <a href="#pricing" class="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-white/20 hover:bg-white/30 backdrop-blur-sm border border-white/30 rounded-lg transition-colors">
+                        Voir les tarifs
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h4 class="text-sm font-semibold text-[#263238] mb-4">Produits</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-sm text-gray-600 hover:text-[#00B8D9] transition-colors">Templates</a></li>
+                        <li><a href="#" class="text-sm text-gray-600 hover:text-[#00B8D9] transition-colors">Catégories</a></li>
+                        <li><a href="#" class="text-sm text-gray-600 hover:text-[#00B8D9] transition-colors">Tarifs</a></li>
+                        <li><a href="#" class="text-sm text-gray-600 hover:text-[#00B8D9] transition-colors">Nouveautés</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-semibold text-[#263238] mb-4">Ressources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-sm text-gray-600 hover:text-[#00B8D9] transition-colors">Documentation</a></li>
+                        <li><a href="#" class="text-sm text-gray-600 hover:text-[#00B8D9] transition-colors">Blog</a></li>
+                        <li><a href="#" class="text-sm text-gray-600 hover:text-[#00B8D9] transition-colors">Tutoriels</a></li>
+                        <li><a href="#" class="text-sm text-gray-600 hover:text-[#00B8D9] transition-colors">Support</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-semibold text-[#263238] mb-4">Entreprise</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-sm text-gray-600 hover:text-[#00B8D9] transition-colors">À propos</a></li>
+                        <li><a href="#" class="text-sm text-gray-600 hover:text-[#00B8D9] transition-colors">Carrières</a></li>
+                        <li><a href="#" class="text-sm text-gray-600 hover:text-[#00B8D9] transition-colors">Contact</a></li>
+                        <li><a href="#" class="text-sm text-gray-600 hover:text-[#00B8D9] transition-colors">Partenaires</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-semibold text-[#263238] mb-4">Légal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-sm text-gray-600 hover:text-[#00B8D9] transition-colors">Confidentialité</a></li>
+                        <li><a href="#" class="text-sm text-gray-600 hover:text-[#00B8D9] transition-colors">CGV</a></li>
+                        <li><a href="#" class="text-sm text-gray-600 hover:text-[#00B8D9] transition-colors">Licences</a></li>
+                        <li><a href="#" class="text-sm text-gray-600 hover:text-[#00B8D9] transition-colors">Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <div class="text-sm text-gray-600 mb-4 md:mb-0">© 2024 TemplateHub. Tous droits réservés.</div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-[#00B8D9] transition-colors">
+                        <i data-lucide="twitter" style="width: 20px; height: 20px; stroke-width: 1.5;"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-[#00B8D9] transition-colors">
+                        <i data-lucide="github" style="width: 20px; height: 20px; stroke-width: 1.5;"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-[#00B8D9] transition-colors">
+                        <i data-lucide="linkedin" style="width: 20px; height: 20px; stroke-width: 1.5;"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-[#00B8D9] transition-colors">
+                        <i data-lucide="instagram" style="width: 20px; height: 20px; stroke-width: 1.5;"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart Sidebar -->
+    <div id="cartSidebar" class="fixed top-0 right-0 h-full w-full sm:w-96 bg-white shadow-2xl transform translate-x-full transition-transform duration-300 z-50 flex flex-col">
+        <div class="flex items-center justify-between p-6 border-b border-gray-200">
+            <h3 class="text-lg font-semibold text-[#263238]">Panier</h3>
+            <button onclick="toggleCart()" class="p-2 hover:bg-gray-100 rounded-lg transition-colors">
+                <i data-lucide="x" style="width: 20px; height: 20px; stroke-width: 1.5;"></i>
+            </button>
+        </div>
+        <div id="cartItems" class="flex-1 overflow-y-auto p-6">
+            <div class="text-center py-12">
+                <i data-lucide="shopping-bag" style="width: 48px; height: 48px; stroke-width: 1.5;" class="text-gray-300 mx-auto mb-4"></i>
+                <p class="text-gray-500">Votre panier est vide</p>
+            </div>
+        </div>
+        <div class="border-t border-gray-200 p-6">
+            <div class="flex items-center justify-between mb-4">
+                <span class="text-sm font-medium text-gray-600">Total</span>
+                <span id="cartTotal" class="text-2xl font-semibold text-[#263238]">0€</span>
+            </div>
+            <button class="w-full px-4 py-3 text-base font-medium text-white bg-[#00B8D9] hover:bg-[#00A3C4] rounded-lg transition-colors mb-3">
+                Commander
+            </button>
+            <button onclick="toggleCart()" class="w-full px-4 py-3 text-base font-medium text-[#263238] bg-white border border-gray-300 hover:border-[#00B8D9] rounded-lg transition-colors">
+                Continuer mes achats
+            </button>
+        </div>
+    </div>
+
+    <!-- Cart Overlay -->
+    <div id="cartOverlay" class="fixed inset-0 bg-black/50 z-40 opacity-0 pointer-events-none transition-opacity duration-300" onclick="toggleCart()"></div>
+
+    <script>
+        lucide.createIcons();
+
+        let cart = [];
+
+        function toggleCart() {
+            const sidebar = document.getElementById('cartSidebar');
+            const overlay = document.getElementById('cartOverlay');
+            const isOpen = !sidebar.classList.contains('translate-x-full');
+
+            if (isOpen) {
+                sidebar.classList.add('translate-x-full');
+                overlay.classList.add('opacity-0', 'pointer-events-none');
+            } else {
+                sidebar.classList.remove('translate-x-full');
+                overlay.classList.remove('opacity-0', 'pointer-events-none');
+            }
+        }
+
+        function addToCart(name, price) {
+            const existingItem = cart.find(item => item.name === name);
+            
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({ name, price, quantity: 1 });
+            }
+            
+            updateCart();
+            toggleCart();
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCart();
+        }
+
+        function updateQuantity(index, change) {
+            cart[index].quantity += change;
+            if (cart[index].quantity <= 0) {
+                removeFromCart(index);
+            } else {
+                updateCart();
+            }
+        }
+
+        function updateCart() {
+            const cartItems = document.getElementById('cartItems');
+            const cartCount = document.getElementById('cartCount');
+            const cartTotal = document.getElementById('cartTotal');
+            
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            
+            if (cart.length === 0) {
+                cartItems.innerHTML = `
+                    <div class="text-center py-12">
+                        <i data-lucide="shopping-bag" style="width: 48px; height: 48px; stroke-width: 1.5;" class="text-gray-300 mx-auto mb-4"></i>
+                        <p class="text-gray-500">Votre panier est vide</p>
+                    </div>
+                `;
+                cartCount.style.display = 'none';
+            } else {
+                cartItems.innerHTML = cart.map((item, index) => `
+                    <div class="flex items-center gap-4 pb-4 mb-4 border-b border-gray-200">
+                        <div class="flex-1">
+                            <h4 class="text-sm font-medium text-[#263238] mb-1">${item.name}</h4>
+                            <div class="text-lg font-semibold text-[#263238]">${item.price}€</div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <button onclick="updateQuantity(${index}, -1)" class="w-8 h-8 flex items-center justify-center border border-gray-300 hover:border-[#00B8D9] hover:text-[#00B8D9] rounded transition-colors">
+                                <i data-lucide="minus" style="width: 14px; height: 14px; stroke-width: 1.5;"></i>
+                            </button>
+                            <span class="w-8 text-center text-sm font-medium">${item.quantity}</span>
+                            <button onclick="updateQuantity(${index}, 1)" class="w-8 h-8 flex items-center justify-center border border-gray-300 hover:border-[#00B8D9] hover:text-[#00B8D9] rounded transition-colors">
+                                <i data-lucide="plus" style="width: 14px; height: 14px; stroke-width: 1.5;"></i>
+                            </button>
+                        </div>
+                        <button onclick="removeFromCart(${index})" class="p-2 text-gray-400 hover:text-red-500 hover:bg-red-50 rounded transition-colors">
+                            <i data-lucide="trash-2" style="width: 18px; height: 18px; stroke-width: 1.5;"></i>
+                        </button>
+                    </div>
+                `).join('');
+                cartCount.textContent = totalItems;
+                cartCount.style.display = 'flex';
+            }
+            
+            cartTotal.textContent = `${totalPrice}€`;
+            
+            lucide.createIcons();
+        }
+    </script>
+
+</body></html>
